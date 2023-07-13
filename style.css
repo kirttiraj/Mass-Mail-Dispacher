@@ -31,19 +31,29 @@ position: relative  ;
 /* margin-left: 26.5%; */
 text-align: center;
 /* margin-top: .2em; */
+
+--s: 0.1em;   /* the thickness of the line */
+--c: #369c78; /* the color */
+/* text-shadow: 3px 3px 50px #676464; */
+color: #0000;
+padding-bottom: var(--s);
+background: 
+  linear-gradient(90deg,var(--c) 50%,#0000) calc(100% - var(--_p,0%))/200% 100%,
+  linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+-webkit-background-clip: text,padding-box;
+        background-clip: text,padding-box;
+transition: 0.7s;
 @supports (background-clip: text) or (-webkit-background-clip: text) {
   background-image: 
-    url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
-  background-size: 110% auto;
-  background-position: center;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  text-shadow: 3px 3px 50px #000000
-}
+    url("data:image/svg+xml,%3Csvg width='2100' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+}}
 
 
+#heading:hover {--_p: 100%;
+  /* text-shadow: 3px 3px 50px #369c78; */
+
 }
+
 
 
 form {
